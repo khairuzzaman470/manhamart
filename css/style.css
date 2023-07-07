@@ -19,7 +19,7 @@ Fonts:
     --border-color: #e5e8ec;
     --dark-color: #0a021c;
 
-    --font-small: 14px;
+    --font-small: 13px;
     --font-smaller: 12px;
     
     --percent100: 100%;
@@ -153,7 +153,7 @@ h4{
     font-weight: normal;
 }
 .icon-small{
-    font-size: 1.25em;
+    font-size: 1em;
     margin: auto;
 }
 .icon-large{
@@ -267,6 +267,11 @@ h4{
 /*------------
 * 01.	HEADER
 *-------------*/
+.header-top {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-transform: uppercase;
+}
 header li > a {
     display: flex;
     position: relative;
@@ -283,31 +288,55 @@ header li > a {
     font-size: var(--font-small);
     justify-content: space-between;
     line-height: 42px;
+    
 }
 .header-top ul {
-    gap: 2em;
+    gap: 1em;
+    
 }
 .header-top li {
     position: relative;
+    border-left: 1px solid rgb(255, 255, 255, .20);
+    padding: 0 10px;
+}
+.header-top li:last-child {
+    border-right: 1px solid rgb(255, 255, 255, .20);
 }
 .header-top ul ul {
     position: absolute;
-    left: -1em;
+    left: 0;
     line-height: 2em;
     background-color: var(--white-color);
     border: 1px solid var(--border-color);
     z-index: 1;
     display: none;
+    color: var(--dark-color);
 }
-.header-top .right ul ul li a{
+.header-top .left ul ul li a{
     padding: .25em 1em;
 }
-.header-top .right ul ul li.current a{
+.header-top .left ul ul li.current a{
     background-color: var(--border-color);
 }
 .header-top li:hover ul{
     display: block;
-}   
+}  
+.header-top .left p {
+    font-size: var(--font-smaller);
+    padding-left: 10px;
+} 
+.header-top .right .icon-box {
+    padding: 0 10px;
+    cursor: pointer;
+}
+.header-top .right .icon-box i{
+    padding: 0 2px;
+    font-size: 15px;
+    transition: .3s;
+}
+.header-top .right .icon-box i:hover{
+    color: var(--secondary-color);
+}
 
 
             /*-----------------
